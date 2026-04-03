@@ -20,6 +20,32 @@ export interface AuthenticateWithWebUntisOptions {
     logger?: AuthLogger;
 }
 
+export interface GetUserNewsOptions {
+    page?: number;
+    search?: string;
+}
+
+export interface GetUserChatsOptions {
+    page?: number;
+    search?: string;
+    limit?: number;
+}
+
+export interface GetChatMessagesOptions {
+    page?: number;
+}
+
+export interface GetMessageReadersOptions {
+    page?: number;
+    search?: string;
+}
+
+export type MarkChatAsReadPayload = Record<string, unknown>;
+
+export type SendChatMessagePayload = {
+    content: string;
+} & Record<string, string | number | boolean | null | undefined>;
+
 export interface SduiAuthResult {
     accessToken: string;
     http: AxiosInstance;

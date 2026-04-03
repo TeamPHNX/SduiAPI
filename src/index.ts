@@ -6,6 +6,12 @@ export type {
     AuthenticateWithWebUntisOptions,
     AuthLogEvent,
     AuthLogger,
+    GetChatMessagesOptions,
+    GetMessageReadersOptions,
+    GetUserChatsOptions,
+    GetUserNewsOptions,
+    MarkChatAsReadPayload,
+    SendChatMessagePayload,
     SduiAuthResult,
     WebUntisCredentials,
 } from './types.js';
