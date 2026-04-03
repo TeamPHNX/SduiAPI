@@ -7,7 +7,7 @@ DISCLAIMER: An independent, open-source project – not connected to or supporte
 ## Install
 
 ```bash
-npm install sduiapi
+npm install @teamphnx/sduiapi
 ```
 
 ## Quick Start
