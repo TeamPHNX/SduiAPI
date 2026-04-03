@@ -1,6 +1,6 @@
 {
     "name": "sduiapi",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "TypeScript SDUI API client with WebUntis authentication",
     "keywords": [
         "sdui"
