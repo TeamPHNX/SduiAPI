@@ -1,5 +1,5 @@
 {
-    "name": "sduiapi",
+    "name": "@teamphnx/sduiapi",
     "version": "0.1.4",
     "description": "TypeScript SDUI API client with WebUntis authentication",
     "keywords": [
