@@ -8,7 +8,12 @@ export function extractMetaRefreshUrl(html: string): string | null {
         return null;
     }
 
-    return match[1].replaceAll('&amp;', '&').trim();
+    // The content attribute can carry tokens after the URL: SDUI's bridge page
+    // sends `content='0; url=https://...&code_challenge=XYZ target=_top'`.
+    // Keeping " target=_top" corrupted the PKCE code_challenge and WebUntis
+    // rejected the authorize request. A URL never contains raw whitespace.
+    const url = match[1].replaceAll('&amp;', '&').trim().split(/\s+/)[0];
+    return url || null;
 }
 
 export function extractCsrfToken(html: string): string | null {
